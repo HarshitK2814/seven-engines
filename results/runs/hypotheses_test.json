@@ -1,0 +1,37 @@
+{
+ "H1_blend_sharpe_positive": {
+  "sharpe": -0.23546522402751743,
+  "ci": [
+   -0.715282154146326,
+   0.2943113633995716
+  ],
+  "p_one_sided": 0.824,
+  "n_months": 84
+ },
+ "H2_corr_with_managed_futures": {
+  "corr": 0.1594634798828743,
+  "ci": [
+   -0.0706591843823981,
+   0.3848494221151416
+  ],
+  "n_months": 84
+ },
+ "H3_corr_with_60_40": {
+  "corr": 0.18959492905859865,
+  "ci": [
+   -0.17549734357311286,
+   0.5421273607323075
+  ],
+  "n_months": 84
+ },
+ "H4_blend_minus_best_single_style": {
+  "best_single_from_dev_val": "idiosyncratic",
+  "diff": 0.37762195254498976,
+  "ci": [
+   -0.26133224579614045,
+   1.1251496413408348
+  ],
+  "p_one_sided": 0.145,
+  "n_months": 84
+ }
+}

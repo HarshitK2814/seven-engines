@@ -1,0 +1,13 @@
+{
+ "sharpe_devval": {
+  "momentum": -0.017641415572454903,
+  "carry": -0.3492079561363082,
+  "value": 0.24165332685301252,
+  "mean_reversion": -0.09988934421170496,
+  "liquidity": -0.7863251804270869,
+  "cross_market": 0.2058974879533242,
+  "idiosyncratic": 0.24949545906421544
+ },
+ "best": "idiosyncratic",
+ "blend": 0.04431209779143641
+}
