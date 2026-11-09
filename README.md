@@ -142,3 +142,76 @@ tests/              look-ahead tests
 is noisy around rolls; costs are small-size estimates; public definitions, not the manager's; 84 test months.
 
 *Research artifact, not investment advice.*
+
+---
+
+## v2 (cost-aware upgrade)
+
+v1's failure was cost: trading drag turned a positive gross Sharpe into a negative net one. v2 attacks that the way a multi-strategy desk would
+(trade only part of the way to the target, faster where trading is cheap), then audits the result for overfitting, realistic execution and capacity.
+Every number is generated from files: [`research/results_v2.md`](research/results_v2.md). v1 above is unchanged.
+Pre-registration v2 hash `b14b0cc95d53` ([`research/preregistration_v2.md`](research/preregistration_v2.md), never edited).
+
+**Timing.** Every signal is computed at the close of day t from data up to and including t. v1 trades at that close (`lag=1`);
+v2 reports the realistic `lag=2` (trade at the next close) as primary.
+
+### Research -> gap -> solution
+
+| Research | Gap in v1 | v2 solution |
+|---|---|---|
+| Garleanu and Pedersen (2013) on trading towards a target; Carver's cost budget ("speed limit"); Bailey and Lopez de Prado on backtest overfitting | v1 paid daily for every small signal change, had no cost budget per style, no overfitting audit, no capacity model, and a test period now seen | Partial adjustment (H1/H2), cost budget and netting (D4-D6), PBO + deflated Sharpe + CPCV (H3), impact and capacity (D1), forward tracker |
+
+```mermaid
+flowchart LR
+    A["v1 blend<br/>7 styles"] --> B["Partial adjustment<br/>cost-scaled rates (H1, H2)"]
+    A --> C["Cost budget per style<br/>D4, D5"]
+    A --> D["Netting benefit<br/>D6"]
+    A --> E["96-config family<br/>PBO, DSR, CPCV (H3)"]
+    A --> F["Lag 2 + sqrt impact<br/>capacity (D1)"]
+    B --> G["Allocation D2, crisis corr D3<br/>HMM tilt E1 (exploratory)"]
+    B & C & D & E & F --> H["Verdicts (prereg v2)"]
+    H --> I["Seen period 2018-2026<br/>labelled, descriptive"]
+    H --> J["Forward tracker<br/>from 2026-11"]
+```
+
+### Results (read the honest version)
+
+| Question | Verdict |
+|---|---|
+| H1: partial adjustment cuts trading cost without losing the gross edge | SUPPORTED at lag 2 only (at lag 1 the gross leg would fail); grid-edge sensitivity does not change it |
+| H2: H1 net Sharpe beats v1, difference CI excludes 0 | SUPPORTED at lag 2; the H1 net Sharpe interval itself still includes 0 |
+| H3: v1 is not an overfit pick (PBO < 0.5 and deflated Sharpe > 0.90) | NOT SUPPORTED (PBO passes, deflated Sharpe is about 0.0005) |
+| D2 allocation, E1 HMM tilt | nothing beats equal-risk; E1 no value (exploratory) |
+| D4/D5 cost budget, D6 netting | most styles fail the budget; netting roughly halves cost (numbers in results_v2.md) |
+| Forward test | 0 days tracked until data exists on or after 2026-11-01; first read 2027-11 |
+
+The rate grid started at 0.05 and the walk-forward chose 0.05 in every fold, so an extra sensitivity (labelled not-in-prereg) extended it to 0.01.
+It was not needed: the new low rates were never chosen and the verdicts stay the same.
+
+### ManifoldBT cross-check
+
+The engine was checked against ManifoldBT 0.31.0: parity tables in [`qengine/PARITY.md`](../qengine/PARITY.md) and raw outputs for P8's price-only
+rules in [`results/v2/manifoldbt/`](results/v2/manifoldbt/). P8's momentum and reversal rules, written in the ManifoldBT DSL, were weak
+(negative Sharpe on synthetic bars); the tool's look-ahead check passed the honest rules and caught a deliberate lead.
+
+### Lessons
+
+* Cost control, not signal quality, moved the result: a slow trader with the same signals beats a fast one net of costs.
+* A supported hypothesis can depend on one design choice: the H1 gross leg holds at lag 2 and fails at lag 1.
+* A low PBO is not evidence of an edge; the deflated Sharpe is the stricter test and v1 fails it.
+* Most styles break a Carver-style cost budget; cutting the universe to cheap markets rescues two of seven, in-sample.
+
+### Honesty
+
+Prereg v2 frozen before any v2 result and never edited. Choices used 2001-2017 only. The 2018-2026 re-run is labelled
+`seen period (v1 reported it)` and is descriptive. E1 is exploratory. The sensitivity is labelled as not in the prereg.
+No H1 or v1 net Sharpe interval excludes zero on its own. Research artifact, not investment advice.
+
+### Reproduce v2
+
+```bash
+"$PY" scripts/v2/h1_trading.py && "$PY" scripts/v2/allocation_d2.py && "$PY" scripts/v2/overfit_audit.py \
+  && "$PY" scripts/v2/crisis_corr_d3.py && "$PY" scripts/v2/e1_hmm.py && "$PY" scripts/v2/execution.py \
+  && "$PY" scripts/v2/d4_d6.py && "$PY" scripts/v2/h1_sensitivity.py && "$PY" scripts/v2/seen_period.py \
+  && "$PY" scripts/v2/forward.py && "$PY" scripts/v2/make_results_v2.py
+```

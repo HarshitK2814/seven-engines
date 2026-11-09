@@ -1,0 +1,386 @@
+{
+ "best_params_per_fold": [
+  {
+   "w": {
+    "Int64": 5
+   }
+  },
+  {
+   "w": {
+    "Int64": 5
+   }
+  },
+  {
+   "w": {
+    "Int64": 5
+   }
+  },
+  {
+   "w": {
+    "Int64": 5
+   }
+  }
+ ],
+ "n_folds": 4,
+ "folds_overlap": false,
+ "effective_folds": 4.0,
+ "walk_forward_efficiency": -32.19025921711458,
+ "folds": [
+  {
+   "fold_index": 0,
+   "train_range": {
+    "start": 978393600000000000,
+    "end": 1230681600000000000
+   },
+   "test_range": {
+    "start": 1230681600000000000,
+    "end": 1293753600000000000
+   },
+   "is_metrics": {
+    "total_return": -0.028212160915592865,
+    "cagr": -0.002467549508345823,
+    "volatility": 0.040052525064175205,
+    "sharpe": -0.06718460870530728,
+    "sortino": -0.09757494553245256,
+    "calmar": -0.02067475844565506,
+    "max_drawdown": -0.11935082650817598,
+    "skewness": 0.24938818703059726,
+    "kurtosis": 3.170341890600289,
+    "tail_ratio": 1.0812503135894607,
+    "omega_ratio": 0.9877214626151049,
+    "ulcer_index": 0.0714155084559227,
+    "best_day": 0.014353625916642354,
+    "worst_day": -0.010991208823020293,
+    "avg_daily_return": -1.0678227079746522e-05,
+    "pct_positive_days": 0.412590799031477,
+    "max_drawdown_duration_days": 2233.0,
+    "tstat_sharpe": -0.228658088806018,
+    "alpha": -0.0043251982657318295,
+    "beta": 0.02309875791209263,
+    "tstat_alpha": -0.3092348323095006
+   },
+   "oos_metrics": {
+    "total_return": 0.02322983555364133,
+    "cagr": 0.01125622756876865,
+    "volatility": 0.025833632077871756,
+    "sharpe": 0.44534103666461894,
+    "sortino": 0.5504123756184127,
+    "calmar": 0.3912853423146943,
+    "max_drawdown": -0.02876731211596406,
+    "skewness": 0.6713135174274951,
+    "kurtosis": 5.226992858962646,
+    "tail_ratio": 1.0946169583571932,
+    "omega_ratio": 1.1110150272960277,
+    "ulcer_index": 0.008977508754487103,
+    "best_day": 0.008138653705948684,
+    "worst_day": -0.007431208614518625,
+    "avg_daily_return": 4.565387496179271e-05,
+    "pct_positive_days": 0.24517374517374518,
+    "max_drawdown_duration_days": 140.0,
+    "tstat_sharpe": 0.6378781366258791,
+    "alpha": 0.011128187153699329,
+    "beta": 0.0016636673733759196,
+    "tstat_alpha": 0.6131965906879862,
+    "trade_stats": {
+     "total_trades": 8448,
+     "round_trips": 5067,
+     "win_rate": 0.4789816459443458,
+     "profit_factor": 1.090240105398795,
+     "expectancy": 46.92756097590389,
+     "avg_win": 1183.6728073218478,
+     "avg_loss": -998.1030120853111,
+     "max_consecutive_wins": 17,
+     "max_consecutive_losses": 16,
+     "avg_holding_seconds": 653788.9875666074,
+     "median_holding_seconds": 518400.0,
+     "min_holding_seconds": 86400.0,
+     "max_holding_seconds": 3888000.0,
+     "total_fees": 86485.10332996685,
+     "sl_exits": 0,
+     "tp_exits": 0,
+     "trailing_exits": 0,
+     "signal_quality": {
+      "avg_mae": 0.013303096031858737,
+      "avg_mfe": 0.019325067934031565,
+      "avg_entry_efficiency": 0.5544955638716961,
+      "avg_exit_efficiency": -0.4330122667580607,
+      "edge_ratio": 1.4526744667370055
+     }
+    }
+   },
+   "best_params": {
+    "w": {
+     "Int64": 5
+    }
+   },
+   "wfe": null
+  },
+  {
+   "fold_index": 1,
+   "train_range": {
+    "start": 978393600000000000,
+    "end": 1293753600000000000
+   },
+   "test_range": {
+    "start": 1293753600000000000,
+    "end": 1356825600000000000
+   },
+   "is_metrics": {
+    "total_return": 0.006962822028202531,
+    "cagr": 0.00047930111666172337,
+    "volatility": 0.040882073258394415,
+    "sharpe": 0.03698912724912522,
+    "sortino": 0.05490309143577075,
+    "calmar": 0.004015901110068052,
+    "max_drawdown": -0.11935082650817598,
+    "skewness": 0.2614787422077759,
+    "kurtosis": 2.9472495978127906,
+    "tail_ratio": 1.12746323584571,
+    "omega_ratio": 1.0067335375793536,
+    "ulcer_index": 0.07091894599994732,
+    "best_day": 0.014353625916642354,
+    "worst_day": -0.010991208823020293,
+    "avg_daily_return": 6.00076273794766e-06,
+    "pct_positive_days": 0.42835011618900076,
+    "max_drawdown_duration_days": 2963.0,
+    "tstat_sharpe": 0.14075399999877455,
+    "alpha": 0.000948731870353939,
+    "beta": 0.0055242466419446155,
+    "tstat_alpha": 0.07413737931641311
+   },
+   "oos_metrics": {
+    "total_return": 0.017701027753952436,
+    "cagr": 0.008639518845152905,
+    "volatility": 0.020158041974956978,
+    "sharpe": 0.43598892771344744,
+    "sortino": 0.43885417815528943,
+    "calmar": 0.23423030058459332,
+    "max_drawdown": -0.03688471911443714,
+    "skewness": -0.325114975011516,
+    "kurtosis": 5.371903891722443,
+    "tail_ratio": 0.9884837468711593,
+    "omega_ratio": 1.1081093212037,
+    "ulcer_index": 0.010551786313115985,
+    "best_day": 0.005370214026707121,
+    "worst_day": -0.006317935445046774,
+    "avg_daily_return": 3.487572660898475e-05,
+    "pct_positive_days": 0.258252427184466,
+    "max_drawdown_duration_days": 204.0,
+    "tstat_sharpe": 0.6226682897896243,
+    "alpha": 0.008957106529401711,
+    "beta": -0.00581519500232632,
+    "tstat_alpha": 0.6347520099644338,
+    "trade_stats": {
+     "total_trades": 8349,
+     "round_trips": 5084,
+     "win_rate": 0.4541699449252557,
+     "profit_factor": 1.0915292073009961,
+     "expectancy": 41.93443356645119,
+     "avg_win": 1101.1032641478625,
+     "avg_loss": -839.370369969575,
+     "max_consecutive_wins": 15,
+     "max_consecutive_losses": 17,
+     "avg_holding_seconds": 620095.0432730133,
+     "median_holding_seconds": 518400.0,
+     "min_holding_seconds": 86400.0,
+     "max_holding_seconds": 4665600.0,
+     "total_fees": 88508.00297119924,
+     "sl_exits": 0,
+     "tp_exits": 0,
+     "trailing_exits": 0,
+     "signal_quality": {
+      "avg_mae": 0.011146719510242487,
+      "avg_mfe": 0.016353327690468274,
+      "avg_entry_efficiency": 0.5426180707642657,
+      "avg_exit_efficiency": -0.3899500895820204,
+      "edge_ratio": 1.4670978017740146
+     }
+    }
+   },
+   "best_params": {
+    "w": {
+     "Int64": 5
+    }
+   },
+   "wfe": 18.025242472469397
+  },
+  {
+   "fold_index": 2,
+   "train_range": {
+    "start": 978393600000000000,
+    "end": 1356825600000000000
+   },
+   "test_range": {
+    "start": 1356825600000000000,
+    "end": 1419897600000000000
+   },
+   "is_metrics": {
+    "total_return": 0.023724374816087357,
+    "cagr": 0.0013505516364464842,
+    "volatility": 0.039757567482604,
+    "sharpe": 0.06786904292181568,
+    "sortino": 0.1002288571181652,
+    "calmar": 0.011315813019141233,
+    "max_drawdown": -0.11935082650817598,
+    "skewness": 0.21542240755946682,
+    "kurtosis": 2.9142589755804558,
+    "tail_ratio": 1.1117328281191645,
+    "omega_ratio": 1.0122889025716209,
+    "ulcer_index": 0.06679803257053998,
+    "best_day": 0.014353625916642354,
+    "worst_day": -0.010991208823020293,
+    "avg_daily_return": 1.0707571642634264e-05,
+    "pct_positive_days": 0.4428294573643411,
+    "max_drawdown_duration_days": 3692.0,
+    "tstat_sharpe": 0.2828846180012074,
+    "alpha": 0.001552785488543371,
+    "beta": 0.012744779547690977,
+    "tstat_alpha": 0.13674847869584658
+   },
+   "oos_metrics": {
+    "total_return": -0.052295882868384935,
+    "cagr": -0.025940448235901248,
+    "volatility": 0.024606314834562902,
+    "sharpe": -1.0537247262516467,
+    "sortino": -1.0701622773234454,
+    "calmar": -0.44366216219807036,
+    "max_drawdown": -0.058468921729503465,
+    "skewness": -0.22120912822810979,
+    "kurtosis": 7.555403008424971,
+    "tail_ratio": 0.8523818109589324,
+    "omega_ratio": 0.7714964118897267,
+    "ulcer_index": 0.01919940485882396,
+    "best_day": 0.008845815815162528,
+    "worst_day": -0.008585899243079176,
+    "avg_daily_return": -0.0001028900093774271,
+    "pct_positive_days": 0.20930232558139536,
+    "max_drawdown_duration_days": 347.0,
+    "tstat_sharpe": -1.506366036612939,
+    "alpha": -0.026727305285470106,
+    "beta": -0.018631001112802473,
+    "tstat_alpha": -1.553124087480596,
+    "trade_stats": {
+     "total_trades": 8382,
+     "round_trips": 5027,
+     "win_rate": 0.45156156753530935,
+     "profit_factor": 0.7924679425348586,
+     "expectancy": -104.34906244653878,
+     "avg_win": 882.4052647564396,
+     "avg_loss": -916.8018454537066,
+     "max_consecutive_wins": 12,
+     "max_consecutive_losses": 22,
+     "avg_holding_seconds": 697301.4521583449,
+     "median_holding_seconds": 604800.0,
+     "min_holding_seconds": 86400.0,
+     "max_holding_seconds": 4320000.0,
+     "total_fees": 78801.02217433904,
+     "sl_exits": 0,
+     "tp_exits": 0,
+     "trailing_exits": 0,
+     "signal_quality": {
+      "avg_mae": 0.010907913898874551,
+      "avg_mfe": 0.016313992143547736,
+      "avg_entry_efficiency": 0.5540286690951288,
+      "avg_exit_efficiency": -0.3945688443335963,
+      "edge_ratio": 1.4956106451510374
+     }
+    }
+   },
+   "best_params": {
+    "w": {
+     "Int64": 5
+    }
+   },
+   "wfe": -19.20729836302645
+  },
+  {
+   "fold_index": 3,
+   "train_range": {
+    "start": 978393600000000000,
+    "end": 1419897600000000000
+   },
+   "test_range": {
+    "start": 1419897600000000000,
+    "end": 1482969600000000000
+   },
+   "is_metrics": {
+    "total_return": 0.007106319932900673,
+    "cagr": 0.0003493386783712804,
+    "volatility": 0.03863569996035888,
+    "sharpe": 0.03209515911142274,
+    "sortino": 0.04741582077485666,
+    "calmar": 0.002926990022539554,
+    "max_drawdown": -0.11935082650817598,
+    "skewness": 0.26095956546032223,
+    "kurtosis": 3.300617525614789,
+    "tail_ratio": 1.0977994812018108,
+    "omega_ratio": 1.0058139244128477,
+    "ulcer_index": 0.06237694699876734,
+    "best_day": 0.014353625916642354,
+    "worst_day": -0.010991208823020293,
+    "avg_daily_return": 4.920710069876616e-06,
+    "pct_positive_days": 0.4469675990030462,
+    "max_drawdown_duration_days": 3830.0,
+    "tstat_sharpe": 0.14451309888619193,
+    "alpha": 0.0005774440538202326,
+    "beta": 0.009340667444808576,
+    "tstat_alpha": 0.0565276381078117
+   },
+   "oos_metrics": {
+    "total_return": -0.0669169085512078,
+    "cagr": -0.03332296999143902,
+    "volatility": 0.02915588841654645,
+    "sharpe": -1.1455294030227952,
+    "sortino": -1.2861240449270406,
+    "calmar": -0.49797533557514545,
+    "max_drawdown": -0.0669169085512078,
+    "skewness": 0.6160841208312133,
+    "kurtosis": 8.75308592760785,
+    "tail_ratio": 0.8705117682770762,
+    "omega_ratio": 0.7548183273990244,
+    "ulcer_index": 0.023776233062248877,
+    "best_day": 0.012961181663756038,
+    "worst_day": -0.007732664310222348,
+    "avg_daily_return": -0.00013253542639843525,
+    "pct_positive_days": 0.20348837209302326,
+    "max_drawdown_duration_days": 358.0,
+    "tstat_sharpe": -1.6376066193239691,
+    "alpha": -0.03339935936788245,
+    "beta": -0.010759046044207287,
+    "tstat_alpha": -1.6384334764819328,
+    "trade_stats": {
+     "total_trades": 8382,
+     "round_trips": 4941,
+     "win_rate": 0.4343250354179316,
+     "profit_factor": 0.7835049163975836,
+     "expectancy": -125.51828393635682,
+     "avg_win": 1045.8895333480384,
+     "avg_loss": -1024.9247869389756,
+     "max_consecutive_wins": 12,
+     "max_consecutive_losses": 15,
+     "avg_holding_seconds": 681582.5136612022,
+     "median_holding_seconds": 604800.0,
+     "min_holding_seconds": 86400.0,
+     "max_holding_seconds": 5356800.0,
+     "total_fees": 80906.44642106985,
+     "sl_exits": 0,
+     "tp_exits": 0,
+     "trailing_exits": 0,
+     "signal_quality": {
+      "avg_mae": 0.013478403449595501,
+      "avg_mfe": 0.02018128440485669,
+      "avg_entry_efficiency": 0.5425594711723832,
+      "avg_exit_efficiency": -0.4459921881899899,
+      "edge_ratio": 1.4973052617342708
+     }
+    }
+   },
+   "best_params": {
+    "w": {
+     "Int64": 5
+    }
+   },
+   "wfe": -95.3887217607867
+  }
+ ]
+}

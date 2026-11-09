@@ -1,0 +1,254 @@
+{
+ "eval_window": [
+  "2004-02-02",
+  "2017-12-29"
+ ],
+ "lag": 2,
+ "table": [
+  {
+   "smoother": "H1 partial (0.05, cost-scaled)",
+   "allocation": "v1 equal-risk (daily n_live)",
+   "net_sharpe": 0.0669795036797089,
+   "ci95_lo": -0.3929518603515392,
+   "ci95_hi": 0.5570095348085735,
+   "gross_sharpe": 0.1684009860682286,
+   "ann_cost": 0.007556478388675753,
+   "n_days": 3591,
+   "turnover_per_yr": 39.49079348093506
+  },
+  {
+   "smoother": "H1 partial (0.05, cost-scaled)",
+   "allocation": "equal",
+   "net_sharpe": 0.14422208935497682,
+   "ci95_lo": -0.31185394174105846,
+   "ci95_hi": 0.6311789380433979,
+   "gross_sharpe": 0.2400045481383618,
+   "ann_cost": 0.006976562539142115,
+   "n_days": 3591,
+   "turnover_per_yr": 36.27390751056772
+  },
+  {
+   "smoother": "H1 partial (0.05, cost-scaled)",
+   "allocation": "invvol",
+   "net_sharpe": 0.1016656396269141,
+   "ci95_lo": -0.3606601053001349,
+   "ci95_hi": 0.5913035267009746,
+   "gross_sharpe": 0.19415643002861846,
+   "ann_cost": 0.006919876293494727,
+   "n_days": 3591,
+   "turnover_per_yr": 33.1311912713608
+  },
+  {
+   "smoother": "H1 partial (0.05, cost-scaled)",
+   "allocation": "hrp",
+   "net_sharpe": 0.060297346446087044,
+   "ci95_lo": -0.4050186369142541,
+   "ci95_hi": 0.5569844050304495,
+   "gross_sharpe": 0.15239770576206488,
+   "ann_cost": 0.006842139731586448,
+   "n_days": 3591,
+   "turnover_per_yr": 32.720898524101685
+  },
+  {
+   "smoother": "H1 partial (0.05, cost-scaled)",
+   "allocation": "sharpe",
+   "net_sharpe": -0.13681141731636043,
+   "ci95_lo": -0.706909378284994,
+   "ci95_hi": 0.40469147037893516,
+   "gross_sharpe": -0.06394733644722558,
+   "ann_cost": 0.005926990003134924,
+   "n_days": 3591,
+   "turnover_per_yr": 27.39584077825628
+  },
+  {
+   "smoother": "v1 buffer 10%",
+   "allocation": "v1 equal-risk (daily n_live)",
+   "net_sharpe": -0.290473127530004,
+   "ci95_lo": -0.7603993446484005,
+   "ci95_hi": 0.17234363638164865,
+   "gross_sharpe": 0.20041296587470958,
+   "ann_cost": 0.04854855251389292,
+   "n_days": 3591,
+   "turnover_per_yr": 371.97636613584615
+  },
+  {
+   "smoother": "v1 buffer 10%",
+   "allocation": "equal",
+   "net_sharpe": -0.24115596319209043,
+   "ci95_lo": -0.7151759448880316,
+   "ci95_hi": 0.24361863356580482,
+   "gross_sharpe": 0.234010578105006,
+   "ann_cost": 0.04540790909223557,
+   "n_days": 3591,
+   "turnover_per_yr": 347.10375143087094
+  },
+  {
+   "smoother": "v1 buffer 10%",
+   "allocation": "invvol",
+   "net_sharpe": -0.17967056744846052,
+   "ci95_lo": -0.6373197971108224,
+   "ci95_hi": 0.3229587358042205,
+   "gross_sharpe": 0.24665275074676676,
+   "ann_cost": 0.04004741979829036,
+   "n_days": 3591,
+   "turnover_per_yr": 299.20937007707937
+  },
+  {
+   "smoother": "v1 buffer 10%",
+   "allocation": "hrp",
+   "net_sharpe": -0.15098540172783328,
+   "ci95_lo": -0.599053113895497,
+   "ci95_hi": 0.336412176618546,
+   "gross_sharpe": 0.26904260532148455,
+   "ann_cost": 0.0393884136433816,
+   "n_days": 3591,
+   "turnover_per_yr": 293.1118757541614
+  },
+  {
+   "smoother": "v1 buffer 10%",
+   "allocation": "sharpe",
+   "net_sharpe": -0.2478782449204408,
+   "ci95_lo": -0.8180399372676266,
+   "ci95_hi": 0.3288782680081076,
+   "gross_sharpe": 0.00025510388503670686,
+   "ann_cost": 0.024063266576674906,
+   "n_days": 3591,
+   "turnover_per_yr": 184.33755728104353
+  }
+ ],
+ "diff_vs_equal": [
+  {
+   "smoother": "H1 partial (0.05, cost-scaled)",
+   "allocation": "equal",
+   "diff_vs_v1_equal_risk": 0.07724258567526793,
+   "ci95_lo": -0.06990342811071312,
+   "ci95_hi": 0.2369657797797279,
+   "ci_excludes_zero": false
+  },
+  {
+   "smoother": "H1 partial (0.05, cost-scaled)",
+   "allocation": "invvol",
+   "diff_vs_v1_equal_risk": 0.03468613594720521,
+   "ci95_lo": -0.14196940198072083,
+   "ci95_hi": 0.2201406913661432,
+   "ci_excludes_zero": false
+  },
+  {
+   "smoother": "H1 partial (0.05, cost-scaled)",
+   "allocation": "hrp",
+   "diff_vs_v1_equal_risk": -0.006682157233621852,
+   "ci95_lo": -0.1842608416640715,
+   "ci95_hi": 0.1735226215274285,
+   "ci_excludes_zero": false
+  },
+  {
+   "smoother": "H1 partial (0.05, cost-scaled)",
+   "allocation": "sharpe",
+   "diff_vs_v1_equal_risk": -0.20379092099606932,
+   "ci95_lo": -0.7263941137765318,
+   "ci95_hi": 0.3410520457048673,
+   "ci_excludes_zero": false
+  },
+  {
+   "smoother": "v1 buffer 10%",
+   "allocation": "equal",
+   "diff_vs_v1_equal_risk": 0.049317164337913555,
+   "ci95_lo": -0.09487727092651622,
+   "ci95_hi": 0.20562017816747266,
+   "ci_excludes_zero": false
+  },
+  {
+   "smoother": "v1 buffer 10%",
+   "allocation": "invvol",
+   "diff_vs_v1_equal_risk": 0.11080256008154346,
+   "ci95_lo": -0.061774245674619144,
+   "ci95_hi": 0.2990335779664111,
+   "ci_excludes_zero": false
+  },
+  {
+   "smoother": "v1 buffer 10%",
+   "allocation": "hrp",
+   "diff_vs_v1_equal_risk": 0.1394877258021707,
+   "ci95_lo": -0.06506204504713883,
+   "ci95_hi": 0.3632261392244407,
+   "ci_excludes_zero": false
+  },
+  {
+   "smoother": "v1 buffer 10%",
+   "allocation": "sharpe",
+   "diff_vs_v1_equal_risk": 0.04259488260956318,
+   "ci95_lo": -0.4678351671724731,
+   "ci95_hi": 0.5345098560450564,
+   "ci_excludes_zero": false
+  }
+ ],
+ "cpcv": {
+  "n_groups": 6,
+  "k_test": 2,
+  "embargo": 21,
+  "n_splits": 15,
+  "selected_counts": {
+   "equal": 9,
+   "v1 equal-risk (daily n_live)": 5,
+   "invvol": 1
+  },
+  "path_ann_sharpe": [
+   0.0669795036797089,
+   0.062309325709243205,
+   0.062309325709243205,
+   0.062309325709243205,
+   0.00047506854951607054
+  ],
+  "fixed_rule_ann_sharpe_full_window": {
+   "v1 equal-risk (daily n_live)": 0.0669795036797089,
+   "equal": 0.14422208935497682,
+   "invvol": 0.1016656396269141,
+   "hrp": 0.060297346446087044,
+   "sharpe": -0.13681141731636043
+  },
+  "fixed_rule_group_sharpe": {
+   "v1 equal-risk (daily n_live)": [
+    -0.18019336056608415,
+    -0.2538621412235212,
+    0.07427305819878045,
+    0.17092987387319264,
+    0.17644210262563612,
+    0.5050953498631097
+   ],
+   "equal": [
+    0.43498846265190083,
+    -0.2607844600470109,
+    0.07444107541607782,
+    0.17092987388064573,
+    0.1764421026256363,
+    0.5050953498631094
+   ],
+   "invvol": [
+    0.38830715904046165,
+    -0.31143868076548975,
+    0.045048568669154326,
+    0.41229526797470506,
+    -0.02737815518123034,
+    0.2879876733130024
+   ],
+   "hrp": [
+    0.2947790299926939,
+    -0.37209642124367587,
+    0.1070403538107851,
+    0.1959282734420275,
+    -0.02193778037523552,
+    0.3239167609004542
+   ],
+   "sharpe": [
+    1.173772495700592,
+    -0.6102315050609467,
+    0.4385274937951523,
+    -0.5990530156503022,
+    -0.9189434071488983,
+    -0.28954114705538997
+   ]
+  }
+ },
+ "best_by_net_sharpe_main_smoother": "equal",
+ "note": "allocation needs a full 36-month window; value net starts 2004-03, so value is in the allocation from Jan 2008"
+}

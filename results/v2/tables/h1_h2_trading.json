@@ -1,0 +1,108 @@
+{
+ "oos": [
+  "2009-01-01",
+  "2017-12-31"
+ ],
+ "lag": 2,
+ "n_oos_days": 2319,
+ "chosen": [
+  {
+   "fold": 0,
+   "params": "{'rate': 0.05, 'cost_scaled': True}",
+   "train_sharpe": 0.11034196755220047,
+   "test_sharpe": 0.3609581417188472
+  },
+  {
+   "fold": 1,
+   "params": "{'rate': 0.05, 'cost_scaled': True}",
+   "train_sharpe": 0.14818528307701714,
+   "test_sharpe": 0.011044176528077132
+  },
+  {
+   "fold": 2,
+   "params": "{'rate': 0.05, 'cost_scaled': True}",
+   "train_sharpe": 0.12926018293323643,
+   "test_sharpe": 0.8974452750936466
+  },
+  {
+   "fold": 3,
+   "params": "{'rate': 0.05, 'cost_scaled': True}",
+   "train_sharpe": 0.20646043581621212,
+   "test_sharpe": 0.3653130979745802
+  },
+  {
+   "fold": 4,
+   "params": "{'rate': 0.05, 'cost_scaled': True}",
+   "train_sharpe": 0.2246569607916337,
+   "test_sharpe": -0.1026711850056548
+  }
+ ],
+ "n_grid_cells": 12,
+ "rebalance_days": {
+  "h1": 2319,
+  "v1_buffer": 2318,
+  "cost_band_D7": 2318
+ },
+ "annual_cost": {
+  "h1": 0.007446557450980215,
+  "v1_buffer": 0.04859817884963652,
+  "reduction": 0.8467729115113557,
+  "cost_band_D7": 0.048711900048125124
+ },
+ "gross_sharpe": {
+  "h1": 0.4448619828139243,
+  "v1_buffer": 0.34203739454941323,
+  "ratio": 1.3006238203865639
+ },
+ "net_sharpe": {
+  "h1": [
+   0.33742828998027974,
+   -0.23764713665234857,
+   0.9405607944454908
+  ],
+  "v1_buffer": [
+   -0.18819867305971533,
+   -0.7797248844904643,
+   0.40209169238438863
+  ],
+  "cost_band_D7": [
+   -0.19622553618158975,
+   -0.7789889211834521,
+   0.3996008218469224
+  ],
+  "diff_h1_minus_v1": [
+   0.525626963039995,
+   0.10994817978169931,
+   0.9304526795217807
+  ]
+ },
+ "H1": {
+  "cost_cut_ge_40pct": true,
+  "gross_ge_80pct_of_v1": true,
+  "supported": true,
+  "note_gross_v1_negative": false
+ },
+ "H2": {
+  "net_h1_gt_v1": true,
+  "ci_excludes_zero": true,
+  "supported": true
+ },
+ "lag1_secondary": {
+  "h1_net_sharpe": [
+   0.37105214156092475,
+   -0.20687217349118325,
+   0.9632873653818524
+  ],
+  "v1_net_sharpe": [
+   0.2317369272210867,
+   -0.3317447737807394,
+   0.7940658556245653
+  ],
+  "h1_gross": 0.47841923701695,
+  "v1_gross": 0.7625210098491887
+ },
+ "turnover_per_year": {
+  "h1": 40.68655271811405,
+  "v1_buffer": 383.978198163609
+ }
+}

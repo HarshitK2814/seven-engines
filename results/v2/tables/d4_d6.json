@@ -1,0 +1,318 @@
+{
+ "prereg_hash": "b14b0cc95d53",
+ "lag": 2,
+ "period": "2001-2017",
+ "cheap_market_cutoff_bp": 1.5,
+ "n_cheap_markets": 21,
+ "n_markets": 39,
+ "styles": {
+  "momentum": {
+   "D4": {
+    "live_from": "2001-01-01",
+    "n_days": 4385,
+    "gross_sharpe": 0.32926771974886365,
+    "gross_ci": [
+     -0.11351161793669198,
+     0.7692919741224621
+    ],
+    "net_sharpe": 0.08215196930037766,
+    "cost_units": 0.2471190567180324,
+    "cost_units_ci": [
+     0.22748285895912665,
+     0.2704118084173773
+    ],
+    "ann_cost": 0.021111803255142354,
+    "turnover_per_yr": 127.08730231571825,
+    "budget_gross_over_3": 0.10975590658295455,
+    "passes_D4": false
+   },
+   "D5_restricted_to_cheap": {
+    "live_from": "2001-01-01",
+    "n_days": 4385,
+    "gross_sharpe": 0.9090001989019297,
+    "gross_ci": [
+     0.4362372503287917,
+     1.3736849086955054
+    ],
+    "net_sharpe": 0.7713924902111922,
+    "cost_units": 0.13758614773058406,
+    "cost_units_ci": [
+     0.12244837123754075,
+     0.15458329036119275
+    ],
+    "ann_cost": 0.012373031287470696,
+    "turnover_per_yr": 120.64710610300676,
+    "budget_gross_over_3": 0.30300006630064324,
+    "passes_D4": true
+   },
+   "named_fast_style": false,
+   "outcome": "passes after restriction"
+  },
+  "carry": {
+   "D4": {
+    "live_from": "2001-01-01",
+    "n_days": 4385,
+    "gross_sharpe": -0.22246225833436067,
+    "gross_ci": [
+     -0.691572418606649,
+     0.27005792148494445
+    ],
+    "net_sharpe": -0.38920372195719277,
+    "cost_units": 0.16684073810671937,
+    "cost_units_ci": [
+     0.13680950492090857,
+     0.20111373541738237
+    ],
+    "ann_cost": 0.01217384509341715,
+    "turnover_per_yr": 105.3093694783581,
+    "budget_gross_over_3": -0.07415408611145356,
+    "passes_D4": false
+   },
+   "D5_restricted_to_cheap": {
+    "live_from": "2001-01-01",
+    "n_days": 4385,
+    "gross_sharpe": 0.068177990807216,
+    "gross_ci": [
+     -0.43623632090547476,
+     0.5727455841425795
+    ],
+    "net_sharpe": -0.07029856359669935,
+    "cost_units": 0.13847511214680566,
+    "cost_units_ci": [
+     0.115093595718649,
+     0.1656818155842174
+    ],
+    "ann_cost": 0.010058865589620481,
+    "turnover_per_yr": 111.94312623020649,
+    "budget_gross_over_3": 0.022725996935738665,
+    "passes_D4": false
+   },
+   "named_fast_style": false,
+   "outcome": "still fails: dropped (reported)"
+  },
+  "value": {
+   "D4": {
+    "live_from": "2004-03-05",
+    "n_days": 3567,
+    "gross_sharpe": 0.27854748274587143,
+    "gross_ci": [
+     -0.2327088059991922,
+     0.7655573767812548
+    ],
+    "net_sharpe": 0.15885016216401024,
+    "cost_units": 0.11970913738832502,
+    "cost_units_ci": [
+     0.10750806791076127,
+     0.13313302967511542
+    ],
+    "ann_cost": 0.009857855663133984,
+    "turnover_per_yr": 32.69797721979029,
+    "budget_gross_over_3": 0.09284916091529048,
+    "passes_D4": false
+   },
+   "D5_restricted_to_cheap": {
+    "live_from": "2004-03-05",
+    "n_days": 3567,
+    "gross_sharpe": -0.19921756824194845,
+    "gross_ci": [
+     -0.7710661344824328,
+     0.37091977776896295
+    ],
+    "net_sharpe": -0.2652871887958385,
+    "cost_units": 0.0661231374402636,
+    "cost_units_ci": [
+     0.05688651367018848,
+     0.07740630644312323
+    ],
+    "ann_cost": 0.005461789524892086,
+    "turnover_per_yr": 30.158873113080162,
+    "budget_gross_over_3": -0.06640585608064949,
+    "passes_D4": false
+   },
+   "named_fast_style": false,
+   "outcome": "still fails: dropped (reported)"
+  },
+  "mean_reversion": {
+   "D4": {
+    "live_from": "2001-01-01",
+    "n_days": 4385,
+    "gross_sharpe": 0.20975466488569328,
+    "gross_ci": [
+     -0.23095417404485746,
+     0.645817664429915
+    ],
+    "net_sharpe": -0.2761826140470581,
+    "cost_units": 0.4860164609016907,
+    "cost_units_ci": [
+     0.4501467494240931,
+     0.5228399555751331
+    ],
+    "ann_cost": 0.051358702322914375,
+    "turnover_per_yr": 442.2349313837026,
+    "budget_gross_over_3": 0.06991822162856443,
+    "passes_D4": false
+   },
+   "D5_restricted_to_cheap": {
+    "live_from": "2001-01-01",
+    "n_days": 4385,
+    "gross_sharpe": 0.22945255545334983,
+    "gross_ci": [
+     -0.21714694120257552,
+     0.7004380221243379
+    ],
+    "net_sharpe": -0.09152894356131043,
+    "cost_units": 0.3210009302611938,
+    "cost_units_ci": [
+     0.2946083244922215,
+     0.3487752263120201
+    ],
+    "ann_cost": 0.03402873006949923,
+    "turnover_per_yr": 454.489591859863,
+    "budget_gross_over_3": 0.07648418515111662,
+    "passes_D4": false
+   },
+   "named_fast_style": true,
+   "outcome": "still fails: dropped (reported)"
+  },
+  "liquidity": {
+   "D4": {
+    "live_from": "2001-01-01",
+    "n_days": 4385,
+    "gross_sharpe": -0.013786110328987732,
+    "gross_ci": [
+     -0.5070120877265099,
+     0.4770624239496419
+    ],
+    "net_sharpe": -0.852421667641541,
+    "cost_units": 0.839014895318444,
+    "cost_units_ci": [
+     0.7836503522232315,
+     0.898020636315699
+    ],
+    "ann_cost": 0.08472997195285488,
+    "turnover_per_yr": 719.7071920984645,
+    "budget_gross_over_3": -0.004595370109662577,
+    "passes_D4": false
+   },
+   "D5_restricted_to_cheap": {
+    "live_from": "2001-01-01",
+    "n_days": 4385,
+    "gross_sharpe": 0.3264077274927295,
+    "gross_ci": [
+     -0.12787485130309675,
+     0.7683153972569594
+    ],
+    "net_sharpe": -0.20050299210241918,
+    "cost_units": 0.5269302838006683,
+    "cost_units_ci": [
+     0.48605954475796603,
+     0.5717142947985313
+    ],
+    "ann_cost": 0.053359717259970296,
+    "turnover_per_yr": 734.7613558205027,
+    "budget_gross_over_3": 0.10880257583090984,
+    "passes_D4": false
+   },
+   "named_fast_style": true,
+   "outcome": "still fails: dropped (reported)"
+  },
+  "cross_market": {
+   "D4": {
+    "live_from": "2001-01-01",
+    "n_days": 4385,
+    "gross_sharpe": 0.2656111602818871,
+    "gross_ci": [
+     -0.22909724757145028,
+     0.6808363449985472
+    ],
+    "net_sharpe": 0.20213430839111962,
+    "cost_units": 0.06348312942662994,
+    "cost_units_ci": [
+     0.058394866618484385,
+     0.06983382346260396
+    ],
+    "ann_cost": 0.0062548055344179235,
+    "turnover_per_yr": 37.97417518478947,
+    "budget_gross_over_3": 0.08853705342729569,
+    "passes_D4": true
+   },
+   "outcome": "passes"
+  },
+  "idiosyncratic": {
+   "D4": {
+    "live_from": "2001-01-01",
+    "n_days": 4385,
+    "gross_sharpe": 0.38368502512960556,
+    "gross_ci": [
+     -0.03441870030927113,
+     0.8457366032182886
+    ],
+    "net_sharpe": 0.24556401785340545,
+    "cost_units": 0.13810584579451235,
+    "cost_units_ci": [
+     0.13004406237738625,
+     0.1481773311741968
+    ],
+    "ann_cost": 0.01277205244994728,
+    "turnover_per_yr": 63.81524846154467,
+    "budget_gross_over_3": 0.1278950083765352,
+    "passes_D4": false
+   },
+   "D5_restricted_to_cheap": {
+    "live_from": "2001-01-01",
+    "n_days": 4385,
+    "gross_sharpe": 0.7181241091205777,
+    "gross_ci": [
+     0.26719068844972965,
+     1.1890139996929612
+    ],
+    "net_sharpe": 0.6359291285290731,
+    "cost_units": 0.08215905232565149,
+    "cost_units_ci": [
+     0.07586309321644248,
+     0.08945773206558988
+    ],
+    "ann_cost": 0.007617618406524235,
+    "turnover_per_yr": 61.53294712704899,
+    "budget_gross_over_3": 0.23937470304019257,
+    "passes_D4": true
+   },
+   "named_fast_style": false,
+   "outcome": "passes after restriction"
+  }
+ },
+ "D6": {
+  "no band": {
+   "netted_cost_per_yr": 0.0636087699383359,
+   "separate_cost_per_yr": 0.11318786700988497,
+   "netting_benefit": 0.4380248376552516,
+   "benefit_ci": [
+    0.42615438590313215,
+    0.4504019255126422
+   ],
+   "netted_cost_sharpe_units": 0.6350747141639584,
+   "separate_cost_sharpe_units": 1.1300761256319838,
+   "turnover_netted": 512.483059541314,
+   "turnover_separate": 985.5854066417631,
+   "netted_net_sharpe": -0.23568778345450891,
+   "n_days": 4385,
+   "live_from": "2001-01-01"
+  },
+  "v1 10% band": {
+   "netted_cost_per_yr": 0.049232526001890986,
+   "separate_cost_per_yr": 0.10250666615796433,
+   "netting_benefit": 0.5197139088883944,
+   "benefit_ci": [
+    0.5064169508533511,
+    0.5325734342019572
+   ],
+   "netted_cost_sharpe_units": 0.49694900634520267,
+   "separate_cost_sharpe_units": 1.0346937284713604,
+   "turnover_netted": 367.7578316091288,
+   "turnover_separate": 878.7709682413282,
+   "netted_net_sharpe": -0.11817385723216565,
+   "n_days": 4385,
+   "live_from": "2001-01-01"
+  }
+ }
+}

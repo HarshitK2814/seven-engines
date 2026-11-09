@@ -1,0 +1,77 @@
+{
+ "label": "EXPLORATORY (E1), not a headline result",
+ "window": [
+  "2006-02-28",
+  "2017-12-31"
+ ],
+ "n_months": 143,
+ "stress_month_share": 0.3055555555555556,
+ "base_sharpe": [
+  -0.26543525918007665,
+  -0.7857636021060694,
+  0.2574976499657886
+ ],
+ "tilt_sharpe": [
+  -0.30444809777767506,
+  -0.8112908710467194,
+  0.21375973334336149
+ ],
+ "diff_tilt_minus_base": [
+  -0.03901283859759841,
+  -0.07145107600466191,
+  -0.006150208229870216
+ ],
+ "diff_ci_excludes_zero": true,
+ "mean_monthly_diff": -0.00010414407504375457,
+ "picks_by_refit": {
+  "2006-01-31": [
+   "idiosyncratic",
+   "momentum"
+  ],
+  "2007-01-31": [
+   "idiosyncratic",
+   "momentum"
+  ],
+  "2008-01-31": [
+   "idiosyncratic",
+   "momentum"
+  ],
+  "2009-01-31": [
+   "value",
+   "idiosyncratic"
+  ],
+  "2010-01-31": [
+   "value",
+   "idiosyncratic"
+  ],
+  "2011-01-31": [
+   "value",
+   "momentum"
+  ],
+  "2012-01-31": [
+   "value",
+   "idiosyncratic"
+  ],
+  "2013-01-31": [
+   "value",
+   "momentum"
+  ],
+  "2014-01-31": [
+   "value",
+   "idiosyncratic"
+  ],
+  "2015-01-31": [
+   "value",
+   "momentum"
+  ],
+  "2016-01-31": [
+   "value",
+   "idiosyncratic"
+  ],
+  "2017-01-31": [
+   "value",
+   "idiosyncratic"
+  ]
+ },
+ "note": "approximation via per-style monthly nets; tilt costs omitted; filtered (causal) states; look-ahead perturbation test in tests/test_v2_hmm.py"
+}

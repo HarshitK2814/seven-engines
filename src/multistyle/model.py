@@ -171,21 +171,32 @@ def _pnl(R, W, inst, cfg, live) -> dict:
             "contrib": (held * Rx)[started]}
 
 
-def run(R: pd.DataFrame, V: pd.DataFrame, macro: dict, inst: pd.DataFrame, cfg: Config,
-        styles: tuple[str, ...] = STYLES) -> dict[str, dict]:
-    """Each style alone (vol-targeted, buffered, costed) and the equal-risk blend of the styles."""
-    R = prepare(R)
+def style_books(R: pd.DataFrame, V: pd.DataFrame, macro: dict, inst: pd.DataFrame, cfg: Config,
+                styles: tuple[str, ...] = STYLES):
+    """Per-style vol-targeted books. R must already be `prepare`d. Returns (scaled, units, k) dicts by style:
+    scaled weights, unit (full-signal) weights and the vol-target multiplier, all decided at the close of t."""
     sector = inst["sector"]
     sig = signals(R, V, macro, sector)
-    scaled, units, out = {}, {}, {}
+    scaled, units, ks = {}, {}, {}
     for s in styles:
         unit = unit_positions(R, sig[s], sector, cfg)
         W0 = (sig[s] * unit).fillna(0.0)
         k = vol_scale(R, W0, cfg)
         scaled[s] = W0.mul(k, axis=0)
         units[s] = unit.fillna(0.0).mul(k, axis=0)
+        ks[s] = k
+    return scaled, units, ks
+
+
+def run(R: pd.DataFrame, V: pd.DataFrame, macro: dict, inst: pd.DataFrame, cfg: Config,
+        styles: tuple[str, ...] = STYLES) -> dict[str, dict]:
+    """Each style alone (vol-targeted, buffered, costed) and the equal-risk blend of the styles."""
+    R = prepare(R)
+    scaled, units, ks = style_books(R, V, macro, inst, cfg, styles)
+    out = {}
+    for s in styles:
         W = apply_buffer(scaled[s].fillna(0.0), units[s].fillna(0.0), cfg.buffer)
-        out[s] = _pnl(R, W, inst, cfg, k.notna())
+        out[s] = _pnl(R, W, inst, cfg, ks[s].notna())
     live = pd.DataFrame({s: scaled[s].notna().any(axis=1) & (scaled[s].abs().sum(axis=1) > 0) for s in styles})
     n_live = live.sum(axis=1).replace(0, np.nan)
     Wb = sum(scaled[s].fillna(0.0) for s in styles).div(n_live, axis=0)

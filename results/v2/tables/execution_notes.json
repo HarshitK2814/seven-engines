@@ -1,0 +1,20 @@
+{
+ "thin_adv_instruments": [
+  "GC=F",
+  "HG=F",
+  "PA=F",
+  "PL=F",
+  "SI=F"
+ ],
+ "forced_fallback": [
+  "AUD",
+  "CAD",
+  "EUR",
+  "GBP",
+  "JPY",
+  "MXN"
+ ],
+ "margin_assumption": 0.05,
+ "fund_round_turn_usd": 2.61,
+ "no_adv_share_of_traded_weight_v1": 0.021458436562989118
+}
